@@ -1,0 +1,146 @@
+[
+  {
+    "Artist": "Metallica",
+    "Name": "Enter SandMan",
+    "Genre": "Metall",
+    "Year": 1991
+  },
+  {
+    "Artist": "Metallica",
+    "Name": "Ride The Lightning",
+    "Genre": "Metall",
+    "Year": 1984
+  },
+  {
+    "Artist": "Iron Maiden",
+    "Name": "The Trooper",
+    "Genre": "Metall",
+    "Year": 1998
+  },
+  {
+    "Artist": "Iron Maiden",
+    "Name": "The Red And The Black",
+    "Genre": "Metall",
+    "Year": 2015
+  },
+  {
+    "Artist": "Nirvana",
+    "Name": "Smells Like Teen Spirit",
+    "Genre": "Alternative Rock",
+    "Year": 1991
+  },
+  {
+    "Artist": "Nirvana",
+    "Name": "Rape Me",
+    "Genre": "Alternative Rock",
+    "Year": 1993
+  },
+  {
+    "Artist": "Scorpions",
+    "Name": "Send Me An Angel",
+    "Genre": "Rock",
+    "Year": 1990
+  },
+  {
+    "Artist": "Scorpions",
+    "Name": "Still Loving You",
+    "Genre": "Rock",
+    "Year": 1984
+  },
+  {
+    "Artist": "Coldplay",
+    "Name": "Paradise",
+    "Genre": "Rock",
+    "Year": 2011
+  },
+  {
+    "Artist": "Coldplay",
+    "Name": "Up&Up ",
+    "Genre": "Rock",
+    "Year": 2015
+  },
+  {
+    "Artist": "Face Forward",
+    "Name": "To This City ",
+    "Genre": "Modern Hardcore",
+    "Year": 2010
+  },
+  {
+    "Artist": "Face Forward",
+    "Name": "Live, My Demon",
+    "Genre": "Modern Hardcore",
+    "Year": 2011
+  },
+  {
+    "Artist": "Disturbed",
+    "Name": "Numb",
+    "Genre": "Alternative Metal",
+    "Year": 2000
+  },
+  {
+    "Artist": "Disturbed",
+    "Name": "Inside The Fire",
+    "Genre": "Alternative Metal",
+    "Year": 2008
+  },
+  {
+    "Artist": "Linkin Park",
+    "Name": "Numb",
+    "Genre": "Alternative",
+    "Year": 2003
+  },
+  {
+    "Artist": "Linkin Park",
+    "Name": "In The End",
+    "Genre": "Alternative",
+    "Year": 2000
+  },
+  {
+    "Artist": "Bullet for My Valentine",
+    "Name": "Tears Don't Fall",
+    "Genre": "Melodic Metalcore",
+    "Year": 2005
+  },
+  {
+    "Artist": "Bullet for My Valentine",
+    "Name": "Venom",
+    "Genre": "Melodic Metalcore",
+    "Year": 2015
+  },
+  {
+    "Artist": "System of a Down",
+    "Name": "Chop Suey!",
+    "Genre": "Alternative Metal",
+    "Year": 2001
+  },
+  {
+    "Artist": "System of a Down",
+    "Name": "Lonely Day",
+    "Genre": "Alternative Metal",
+    "Year": 2005
+  },
+  {
+    "Artist": "Three Days Grace",
+    "Name": "I Hate Everything About You",
+    "Genre": "Alternative Rock",
+    "Year": 2003
+  },
+  {
+    "Artist": "Three Days Grace",
+    "Name": "Never Too Late",
+    "Genre": "Alternative Rock",
+    "Year": 2006
+  },
+  {
+    "Artist": "Rise Against",
+    "Name": "Savior",
+    "Genre": "Melodic Hardcore",
+    "Year": 2008
+  },
+  {
+    "Artist": "Rise Against",
+    "Name": "Satellite",
+    "Genre": "Melodic Hardcore",
+    "Year": 2011
+  }
+]

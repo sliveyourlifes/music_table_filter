@@ -1,0 +1,4 @@
+#ignore directory
+.idea/
+bower_components/
+node_modules/

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="appModule">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>test_KLIKA-TECH</title>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="module/appModule.js"></script>
+    <script src="controllers/filterController.js"></script>
+    <script data-require="angular-ui-bootstrap@0.3.0" data-semver="0.3.0"
+            src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.3.0.min.js"></script>
+    <!--<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>-->
+    <link data-require="bootstrap-css@2.3.2" data-semver="2.3.2" rel="stylesheet"
+          href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css"/>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.css">
+
+    <style>
+        td {
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        th {
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body ng-controller="filterController">
+
+<div class="container-fluid">
+    <div class="row" style="margin: 50px 10px 15px">
+        <p>singers in table:
+            <span  ng-cloak=""> {{singers.length}}</span>
+            <p>Limit:
+                <select ng-model="limitValue" ng-cloak="" ng-options="value for value in limitRange"></select>
+            </p>
+        </p>
+        <div class="col-lg-9">
+            <h2>PlayList</h2>
+            <table class="table  table-responsive table-bordered">
+                <thead>
+                <tr>
+                    <th>n/n</th>
+                    <th>
+                        <a href="#" ng-click="sortType = 'Artist'; sortReverse = !sortReverse">
+                            Artist
+                            <span ng-show="sortType == 'Artist' && !sortReverse" class="fa fa-caret-down"></span>
+                            <span ng-show="sortType == 'Artist' && sortReverse" class="fa fa-caret-up"></span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="#" ng-click="sortType = 'Name'; sortReverse = !sortReverse">
+                            Name
+                            <span ng-show="sortType == 'Name' && !sortReverse"
+                                  class="fa fa-caret-down fa-caret-down"></span>
+                            <span ng-show="sortType == 'Name' && sortReverse"
+                                  class="fa fa-caret-down fa-caret-up"></span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="#" ng-click="sortType = 'Genre'; sortReverse = !sortReverse">
+                            Genre
+                            <span ng-show="sortType == 'Genre' && !sortReverse" class="fa fa-caret-down"></span>
+                            <span ng-show="sortType == 'Genre' && sortReverse" class="fa fa-caret-up"></span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="#" ng-click="sortType = 'Year'; sortReverse = !sortReverse">
+                            Year
+                            <span ng-show="sortType == 'Year' && !sortReverse" class="fa fa-caret-down"></span>
+                            <span ng-show="sortType == 'Year' && sortReverse" class="fa fa-caret-up"></span>
+                        </a>
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-cloak=""
+                    ng-repeat="singer in aaa | orderBy:sortType:sortReverse| limitTo:limitValue | filter:{ Artist:selectArtist, Genre:selectGenre, Year:selectYear}">
+                    <td>{{$index+1 }}</td>
+                    <td>{{singer.Artist}}</td>
+                    <td>{{singer.Name}}</td>
+                    <td>{{singer.Genre }}</td>
+                    <td>{{singer.Year}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-lg-2">
+            <h2>Filter</h2>
+            <form name="filterForm">
+                <label for="searchArtist">Artist</label>
+                <br/>
+                <select id="searchArtist" ng-model="selectArtist" ng-cloak="" style="width: 162px">
+                    <option ng-repeat="artist in artists" value="{{artist}}">{{artist}}</option>
+                </select>
+                <br/>
+                <label for="searchGenre">Genre</label>
+                <br/>
+                <select id="searchGenre" ng-model="selectGenre" ng-cloak="" style="width: 162px">
+                    <option ng-repeat="genre in genres" value="{{genre}}">{{genre}}</option>
+                </select>
+                <br/>
+                <label for="searchYear">Year</label>
+                <br/>
+                <select id="searchYear" ng-model="selectYear" ng-cloak="" style="width: 162px">
+                    <option ng-repeat="year in years" value="{{year}}">{{year}}</option>
+                </select>
+                <button type="button" class="btn btn-danger btn-xs" ng-click="reset()">reset</button>
+            </form>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-offset-4 col-lg-3">
+            <div data-pagination="" data-num-pages="numPages()" data-current-page="currentPage" data-max-size="maxSize"
+            >
+            </div>
+        </div>
+        <div class="btn-group" role="group" aria-label="..." style="margin: 20px 0px 20px 72px">
+            <button type="button" class="btn btn-default" ng-click="limitFive()">5</button>
+            <button type="button" class="btn btn-default" ng-click="limitTen()">10</button>
+            <button type="button" class="btn btn-default" ng-click="limitFifteen()">15</button>
+            <button type="button" class="btn btn-default" ng-click="limitTwenty()">20</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>
